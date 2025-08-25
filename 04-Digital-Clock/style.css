@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.clock{
+    height: 50px;
+    width: 300px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 15px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
