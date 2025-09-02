@@ -1,21 +1,31 @@
-const form = document.querySelector("form")
+let form = document.querySelector("#bmiForm")
 
-form.addEventListener("submit", function (e) {
-    e.preventDefault()
+bmiForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    const height = document.querySelector("#height").value    
-    
-    const weight = document.querySelector("#weight").value    
-    
-    const result = document.querySelector(".result")
+    let weight = parseInt(document.querySelector("#weight").value);
 
-    if (height === "" || height <= 0 || isNaN(height)) {
-        result.textContent = "Please give a valid height"
-    } else if (weight === "" || weight <= 0 || isNaN(weight)) {
-        result.textContent = "Please give a valid weight"
+    let height = parseInt(document.querySelector("#height").value)/100
+
+    let result = document.querySelector("#result")
+
+    let message = ""
+    let bmi = (weight / (height * height)).toFixed(2);
+
+    if (bmi < 18.5) {
+        message = `You are Underweight 😕 bmi = ${bmi}`;
+        result.textContent = message
+    } else if (bmi >= 18.5 && bmi <= 24.9) {
+        message = `You are Normal 😊 bmi = ${bmi}`;
+        result.textContent = message
+    } else if (bmi >= 25 && bmi <= 29.9) {
+        message = `You are Overweight 😟 bmi = ${bmi}`;
+        result.textContent = message
     } else {
-        const bmi = (weight / ((height * height) / 100)).toFixed(2)
-        result.textContent = `Result is = ${bmi}`
-    }
+        message = `You are Obese 😢 bmi = ${bmi}`;
+        result.textContent = message
+    }     
+    
+    form.reset()    
 
 })
