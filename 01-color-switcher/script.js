@@ -1,27 +1,40 @@
-let box = document.querySelectorAll(".box")
+const boxes = document.querySelectorAll(".color-box");
 
-box.forEach(function(boxes){
-    boxes.addEventListener("click",function(e){
-        if(e.target.id === "box1"){
-            document.body.style.backgroundColor = "red"
-        }
+// First Tarika
 
-        if(e.target.id === "box2"){
-            document.body.style.backgroundColor = "blue"
-        }
+boxes.forEach(function (box) {
+    box.addEventListener("click", function (e) {
+        const color = box.getAttribute("data-color");
 
-        if(e.target.id === "box3"){
-            document.body.style.backgroundColor = "green"
-        }
+        document.querySelector("body").style.backgroundColor = color;
+    })
+})
 
-        if(e.target.id === "box4"){
-            document.body.style.backgroundColor = "orange"
-        }
+// Second Tarika
 
-        if(e.target.id === "box5"){
-            document.body.style.backgroundColor = "purple"
-        }
-        
+let array = Array.from(boxes)
+
+array.map(function(box){
+    box.addEventListener("click",function(e){
+        color = box.getAttribute("data-color");
+        document.querySelector("body").style.backgroundColor = color;    
     })
     
 })
+
+// Third Tarika
+
+let arr3 = [...boxes]
+arr3.map(function(box){
+    box.addEventListener("click",function(e){
+        color = box.getAttribute("data-color");
+        document.querySelector("body").style.backgroundColor = color;    
+    })
+    
+})
+
+
+
+
+
+

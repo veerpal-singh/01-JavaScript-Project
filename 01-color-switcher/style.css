@@ -19,7 +19,7 @@ body {
 }
 
 
-.box {
+.color-box {
     height: 100px;
     width: 100px;
     border-radius: 15px;
@@ -32,22 +32,22 @@ body {
     border: 2px solid grey;
 }
 
-#box1 {
+.red {
     background-color: red;
 }
 
-#box2 {
+.blue {
     background-color: blue;
 }
 
-#box3 {
+.green {
     background-color: green;
 }
 
-#box4 {
+.orange {
     background-color: orange;
 }
 
-#box5 {
+.purple {
     background-color: purple;
 }
